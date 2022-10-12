@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='./access/img/icon.png' rel='icon' sizes='128x128' type='image/png'/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./access/css/style.css">
+    <title>Nguyễn Hùng - Calculator</title>
+</head>
+<body>
+
+    <!--THONG BAO KHI TAT JAVASCRIPT-->
+    <noscript>
+
+        <div class='noscript'>
+        
+          <p><span>&#9888;</span></p>
+        
+          <p>Vui lòng bật Javascript trình duyệt để xem nội dung trang web của chúng tôi</p>
+        
+          <p>Cảm ơn!</p>
+        
+        </div>
+        
+        </noscript>
+    
+    <div class="wrapper">
+        <section class="screen">
+            0
+        </section>
+
+        <section class="calc-buttons">
+            <div class="calc-button-row">
+              <button class="calc-button double">
+                C
+              </button>
+              <button class="calc-button">
+                &larr;
+              </button>
+              <button class="calc-button">
+                &divide;
+              </button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    7
+                </button>
+                <button class="calc-button">
+                    8
+                </button>
+                <button class="calc-button">
+                    9
+                </button>
+                <button class="calc-button">
+                    &times;
+                </button>
+            </div>
+            
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    4
+                </button>
+                <button class="calc-button">
+                    5
+                </button>
+                <button class="calc-button">
+                    6
+                </button>
+                <button class="calc-button">
+                    &minus;
+                </button>
+            </div>
+
+            <div class="calc-button-row">
+                <button class="calc-button">
+                    1
+                </button>
+                <button class="calc-button">
+                    2
+                </button>
+                <button class="calc-button">
+                    3
+                </button>
+                <button class="calc-button">
+                    &plus;
+                </button>
+            </div>
+
+            <div class="calc-button-row">
+                <button class="calc-button triple">
+                    0
+                </button>
+                <button class="calc-button">
+                    &equals;
+                </button>
+            </div>
+        </section>
+    </div>
+    <!--KHONG CHO SAO CHEP VIEW SOURCE-->
+    <script src="./access/js/main.js"></script>
+    <script language='JavaScript'>
+
+        //<![CDATA[
+        window.onload = function() {
+    
+            document.addEventListener("contextmenu", function(e) {
+    
+                e.preventDefault();
+    
+            }, false);
+    
+            document.addEventListener("keydown", function(e) {
+    
+                //document.onkeydown = function(e) {
+    
+                // "I" key
+    
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+    
+                    disabledEvent(e);
+    
+                }
+    
+                // "J" key
+    
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+    
+                    disabledEvent(e);
+    
+                }
+    
+                // "S" key + macOS
+    
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+    
+                    disabledEvent(e);
+    
+                }
+    
+                // "U" key
+    
+                if (e.ctrlKey && e.keyCode == 85) {
+    
+                    disabledEvent(e);
+    
+                }
+    
+                // "F12" key
+    
+                if (event.keyCode == 123) {
+    
+                    disabledEvent(e);
+    
+                }
+    
+            }, false);
+    
+     
+    
+            function disabledEvent(e) {
+    
+                if (e.stopPropagation) {
+    
+                    e.stopPropagation();
+    
+                } else if (window.event) {
+    
+                    window.event.cancelBubble = true;
+    
+                }
+    
+                e.preventDefault();
+    
+                return false;
+    
+            }
+    
+        };
+    
+    //]]>
+    
+    </script>
+</body>
+<!--THONG BAO KHI TAT JAVASCRIPT2-->
+<noscript>
+
+    <style type='text/css'>
+    
+    /* No Script */
+    
+    body,html{overflow:hidden}
+    
+    .noscript{background:#e74c3c;color:#fff;padding:8% 0 0 0;position:fixed;bottom:0;left:0;top:0;right:0;z-index:1000;height:auto;-webkit-transform:translateZ(0);transform:translateZ(0);overflow:hidden}
+    
+    .noscript p{margin:0;text-align:center;padding:0 20px 10px 20px;margin:auto;font-size:3rem;line-height:1.5;font-family:monospace;max-width:1010px;text-transform:uppercase;font-weight:700}
+    
+    .noscript p span{color:#ffe88b;font-size:10rem;line-height:normal;font-weight:normal}
+    
+    </style>
+    
+    </noscript>
+</html>
